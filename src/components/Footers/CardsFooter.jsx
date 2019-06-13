@@ -16,6 +16,8 @@ import {
 } from "reactstrap";
 
 class CardsFooter extends React.Component {
+  
+
   render() {
     return (
       <>

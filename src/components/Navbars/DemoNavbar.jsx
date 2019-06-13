@@ -38,12 +38,7 @@ class DemoNavbar extends React.Component {
             id="navbar-main"
           >
             <Container>
-              <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
-                <img
-                  alt="..."
-                  src={require("assets/img/brand/argon-react-white.png")}
-                />
-              </NavbarBrand>
+              
               <button className="navbar-toggler" id="navbar_global">
                 <span className="navbar-toggler-icon" />
               </button>
@@ -152,6 +147,12 @@ class DemoNavbar extends React.Component {
                     </DropdownMenu>
                   </UncontrolledDropdown>
                 </Nav>
+                <NavbarBrand className="align-items-lg-center mr-lg-5" to="/" tag={Link}>
+                <img
+                  alt="..."
+                  src={require("assets/img/brainlogo.png")}
+                />
+              </NavbarBrand>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem>
                     <NavLink

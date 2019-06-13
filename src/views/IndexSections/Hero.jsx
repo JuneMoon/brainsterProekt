@@ -27,16 +27,17 @@ class Hero extends React.Component {
               <div className="col px-0">
                 <Row className="align-items-center justify-content-center">
                   <Col className="text-center" lg="6">
-                    <img
+                    {/* <img
                       alt="..."
                       className="img-fluid"
-                      src={require("assets/img/brand/argon-react-white.png")}
+                      src={require("assets/img/brainlogo.png")}
                       style={{ width: "200px" }}
-                    />
-                    <p className="lead text-white">
-                      A beautiful Design System for Bootstrap 4. It's Free and
-                      Open Source.
-                    </p>
+                    /> */}
+                    <h1 className="h1 text-white">
+                      FUTURE PROOF YOUR ORGANIZATION 
+                    </h1>
+                    <p className="lead text-white">Find out how to unlock progress in your business. Understand your current state, 
+                      identify opportunity areas and prepate to take charge of your organization's future.</p>
                     <div className="btn-wrapper mt-5">
                       <Button
                         className="btn-white btn-icon mb-3 mb-sm-0"
