@@ -5,7 +5,7 @@ import { Container, Row } from "reactstrap";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
-import CardsFooter from "components/Footers/CardsFooter.jsx";
+import Cards from "components/Cards.jsx";
 
 // index page sections
 import Hero from "./IndexSections/Hero.jsx";
@@ -63,7 +63,7 @@ class Index extends React.Component {
           <Hero />
 
         </main>
-        <CardsFooter data={this.state.data} />
+        <Cards data={this.state.data} />
       </>
     );
   }
