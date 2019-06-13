@@ -63,7 +63,7 @@ class Index extends React.Component {
           <Hero />
 
         </main>
-        <CardsFooter />
+        <CardsFooter data={this.state.data} />
       </>
     );
   }

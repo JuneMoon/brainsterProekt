@@ -16,7 +16,12 @@ import {
 } from "reactstrap";
 
 class CardsFooter extends React.Component {
-  
+  constructor(props) {
+    super(props);
+    }
+    create
+
+
 
   render() {
     return (
@@ -24,7 +29,9 @@ class CardsFooter extends React.Component {
         <footer className="footer has-cards">
           <Container className="container-lg">
             <Row>
+
               <Col className="mb-5 mb-md-0" md="6">
+
                 <Card className="card-lift--hover shadow border-0">
                   <Link to="/landing-page">
                     <CardImg
