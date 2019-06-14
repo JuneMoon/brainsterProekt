@@ -4,7 +4,8 @@ import React from "react";
 // import { Link } from "react-router-dom";
 //reactstrap components
 import {
-  Container,
+  // Container,
+  // Row,
   Col,
   Card,
   CardImg,
@@ -17,25 +18,19 @@ import {
 
 const GameCard = (props) => {
   
-  let games = [];
-  for (var i=0; i < props.id - 1; i++) {
-    games.push(<GameCard />)
-  }
-
-  
   return (
-    <Container>
-      <Col sm="4">
-        <Card>
-          <CardImg src={props.image} alt="game image" />
-          <CardBody>
-            <CardTitle>{props.title}</CardTitle>
-            <CardSubtitle>Категорија: {props.category}</CardSubtitle>
-            <CardText>Времетраење: {props.timeFrame}</CardText>
-          </CardBody>
-        </Card>
-      </Col>
-    </Container>
+        <Col sm="4">
+          <Card>
+            <CardImg src={props.image} alt="game image" />
+            <CardBody>
+              <CardTitle>{props.title}</CardTitle>
+              <CardSubtitle>Категорија: {props.category}</CardSubtitle>
+              <CardText>Времетраење: {props.timeFrame}</CardText>
+            </CardBody>
+          </Card>
+        </Col>
+        
+      
   );
 }
 

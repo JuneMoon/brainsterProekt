@@ -1,12 +1,13 @@
 import React from "react";
-//import axios from 'axios';
+// import axios from 'axios';
 
 // reactstrap components
-import { Container, Row, } from "reactstrap";
+//import {Col} from "reactstrap";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
-import GameCard from "components/GameCard.jsx";
+//import GameCard from "components/GameCard.jsx";
+import CardInput from "components/CardsInput.jsx";
 
 
 // index page sections
@@ -35,7 +36,7 @@ class Index extends React.Component {
   constructor() {
     super();
     this.state = {
-      games: ''
+      games: '',
     }
   }
 
@@ -43,24 +44,29 @@ class Index extends React.Component {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
+    // axios.get(`https://brainsterboxapi.herokuapp.com/games`)
+    //   .then(res => {
+    //     // const games = res.data;
+    //     this.setState({games: res.data });
+    //   })
   }
 
   render() {
-    let gameCards = this.state.
     return (
       <>
-        <DemoNavbar />
+      <DemoNavbar />
         <main ref="main">
           <Hero />
-
         </main>
-        <Container>
-          <Row>
-            <GameCard />
-          </Row>
-        </Container>
-      </>
-    );
+      {/* <GameCard key={this.state.games.id} /> */}
+      <CardInput />  
+        </>  
+    )
+  
+      
+
+      
+          
   }
 }
 

@@ -1,44 +1,52 @@
 import React from "react";
 import axios from "axios";
+import GameCard from "components/GameCard.jsx";
+import {
+  Row,
+  Col,
+  Card
+} from "reactstrap";
+//import { element } from "prop-types";
 
 class CardsInput extends React.Component {
-  constructor(props) {
-      super(props);
+  constructor() {
+      super();
       this.state = {
           games: [],
       }   
   }
 
   componentDidMount() {
-      document.documentElement.scrollTop = 0;
-      document.scrollingElement.scrollTop = 0;
+      // document.documentElement.scrollTop = 0;
+      // document.scrollingElement.scrollTop = 0;
       
       axios.get('https://brainsterboxapi.herokuapp.com/games')
       .then(res => {
-          this.setState({games: res.data});
+        const games = res.data;
+          this.setState({games});
       });
   }
 
   render() {
       return (
-         <Container className="GameCard">
            <Row>
              <Col sm="4">
-              {this.state.games.map(t => {
-                return (
-                  <Card id={games.id}>
-                    <CardImg src={this.state.image} alt="game image" />
-                      <CardBody>
-                        <CardTitle>{this.state.title}</CardTitle>
-                        <CardSubtitle>Категорија: {this.state.category}</CardSubtitle>
-                        <CardText>Времетраење: {this.state.timeFrame}</CardText>
-                      </CardBody>
-                  </Card>
-                )
-              })}
+              <Card>
+                {this.state.games.map (games => {
+                  return (
+                    <GameCard 
+                    games={games}
+                    id={games.id}
+                    image={games.image}
+                    title={games.title}
+                    category={games.category}
+                    timeFrame={games.timeFrame}  
+                    />
+                  )
+                })}
+              </Card>
              </Col>
            </Row>
-          </Container>
         )
   }
 }  
