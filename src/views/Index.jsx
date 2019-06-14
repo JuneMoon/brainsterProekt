@@ -1,15 +1,16 @@
 import React from "react";
+//import axios from 'axios';
 
 // reactstrap components
-import { Container, Row } from "reactstrap";
+import { Container, Row, } from "reactstrap";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
-import Cards from "components/Cards.jsx";
+import GameCard from "components/GameCard.jsx";
+
 
 // index page sections
 import Hero from "./IndexSections/Hero.jsx";
-// import { forEachTrailingCommentRange } from "typescript";
 // import Buttons from "./IndexSections/Buttons.jsx";
 // import Inputs from "./IndexSections/Inputs.jsx";
 // import CustomControls from "./IndexSections/CustomControls.jsx";
@@ -31,31 +32,18 @@ import Hero from "./IndexSections/Hero.jsx";
 // import Download from "./IndexSections/Download.jsx";
 
 class Index extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      data: {},
-    }
-  }
+  
+
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
-    fetch('https://brainsterboxapi.herokuapp.com/games')
-    .then(function (response) {
-      return response.json();
-    })
-    .then(res => {
-      console.log(res);
-      this.setState({
-        data: res
-      });
-
-    })
-    console.log(this.state.data);
 
   }
+
   render() {
+    
+
     return (
       <>
         <DemoNavbar />
@@ -63,7 +51,11 @@ class Index extends React.Component {
           <Hero />
 
         </main>
-        <Cards data={this.state.data} />
+        <Container>
+          <Row>
+            <GameCard />
+          </Row>
+        </Container>
       </>
     );
   }
