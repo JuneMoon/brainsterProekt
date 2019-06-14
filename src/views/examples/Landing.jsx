@@ -21,7 +21,7 @@ import {
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
-import CardsFooter from "components/Footers/CardsFooter.jsx";
+import Cards from "components/Cards.jsx";
 
 // index page sections
 import Download from "../IndexSections/Download.jsx";
@@ -839,7 +839,7 @@ class Landing extends React.Component {
           </section>
           <Download />
         </main>
-        <CardsFooter />
+        <Cards />
       </>
     );
   }

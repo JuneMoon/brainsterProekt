@@ -9,7 +9,7 @@ import Cards from "components/Cards.jsx";
 
 // index page sections
 import Hero from "./IndexSections/Hero.jsx";
-import { forEachTrailingCommentRange } from "typescript";
+// import { forEachTrailingCommentRange } from "typescript";
 // import Buttons from "./IndexSections/Buttons.jsx";
 // import Inputs from "./IndexSections/Inputs.jsx";
 // import CustomControls from "./IndexSections/CustomControls.jsx";
