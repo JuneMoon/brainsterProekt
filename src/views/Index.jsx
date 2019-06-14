@@ -32,18 +32,21 @@ import Hero from "./IndexSections/Hero.jsx";
 // import Download from "./IndexSections/Download.jsx";
 
 class Index extends React.Component {
-  
+  constructor() {
+    super();
+    this.state = {
+      games: ''
+    }
+  }
 
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
-
   }
 
   render() {
-    
-
+    let gameCards = this.state.
     return (
       <>
         <DemoNavbar />

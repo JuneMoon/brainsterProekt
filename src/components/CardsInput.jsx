@@ -1,21 +1,20 @@
 import React from "react";
-import GameCard from "components/GameCard";
 import axios from "axios";
 
 class CardsInput extends React.Component {
-  constructor() {
-      super();
+  constructor(props) {
+      super(props);
       this.state = {
-          games: games,
+          games: [],
       }   
   }
+
   componentDidMount() {
       document.documentElement.scrollTop = 0;
       document.scrollingElement.scrollTop = 0;
       
       axios.get('https://brainsterboxapi.herokuapp.com/games')
       .then(res => {
-          console.log(res);
           this.setState({games: res.data});
       });
   }
@@ -25,14 +24,16 @@ class CardsInput extends React.Component {
          <Container className="GameCard">
            <Row>
              <Col sm="4">
-              {this.state.games.map(games => {
+              {this.state.games.map(t => {
                 return (
-                  <Card  
-                    id={games.id}>
-                    img={require(`../assets/img/${games.id}.jpg`)}
-                    title:{games.title}
-                    category:{games.category}
-                    timeframe:{games.timeFrame} />
+                  <Card id={games.id}>
+                    <CardImg src={this.state.image} alt="game image" />
+                      <CardBody>
+                        <CardTitle>{this.state.title}</CardTitle>
+                        <CardSubtitle>Категорија: {this.state.category}</CardSubtitle>
+                        <CardText>Времетраење: {this.state.timeFrame}</CardText>
+                      </CardBody>
+                  </Card>
                 )
               })}
              </Col>

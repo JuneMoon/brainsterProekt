@@ -16,8 +16,9 @@ import {
 } from "reactstrap";
 
 const GameCard = (props) => {
+  
   let games = [];
-  for (var i=0; i < this.props.id - 1; i++) {
+  for (var i=0; i < props.id - 1; i++) {
     games.push(<GameCard />)
   }
 
@@ -26,11 +27,11 @@ const GameCard = (props) => {
     <Container>
       <Col sm="4">
         <Card>
-          <CardImg src={this.props.image} alt="game image" />
+          <CardImg src={props.image} alt="game image" />
           <CardBody>
-            <CardTitle>{this.props.title}</CardTitle>
-            <CardSubtitle>Категорија: {this.props.category}</CardSubtitle>
-            <CardText>Времетраење: {this.props.timeFrame}</CardText>
+            <CardTitle>{props.title}</CardTitle>
+            <CardSubtitle>Категорија: {props.category}</CardSubtitle>
+            <CardText>Времетраење: {props.timeFrame}</CardText>
           </CardBody>
         </Card>
       </Col>
