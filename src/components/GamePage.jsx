@@ -1,19 +1,13 @@
 import React from "react";
 import axios from "axios";
 import NavButton from './NavButton';
+import GameSteps from './GameSteps';
 import {
     Container,
     Row,
-    Col,
-    // Card,
-    // CardImg,
-    // CardText, 
-    // CardBody,
-    // CardTitle, 
-    // CardSubtitle,
-    //Badge,
-    //NavItem,  
+    Col 
   } from "reactstrap";
+import { element } from "prop-types";
 
 class Cards extends React.Component {
   constructor() {
@@ -33,15 +27,17 @@ class Cards extends React.Component {
         const game = games.find(o => {
             return o.id === id
         })
+        const steps = game.steps;
+        });
         this.setState({game});
     });
   }
   render() {
-    const steps = this.state.steps;
+    //const steps = this.state.game.steps;
     console.log(this.state.game);
-    console.log(steps);
-    //console.log(this.state.steps);
-    console.log('rerender');
+    // console.log(steps);
+    console.log(this.state.steps);
+    // console.log('rerender');
     return (
         <>
         <NavButton />
@@ -51,6 +47,8 @@ class Cards extends React.Component {
                 <h1>{this.state.game.title}</h1>
                 </Col>
             </Row>
+        </Container>
+        <Container>
             <Row>
                 <Col sm="3">
                     <i></i><span>{this.state.game.timeFrame}</span>
@@ -77,27 +75,16 @@ class Cards extends React.Component {
             <Row>
                 <Col>
                    <Row>
-                   {this.state.game.steps.map(game => {
-                        game.steps.flatMap(step => {
-                            return(
-                                <p>{step}</p>
-                            )
-                        })
-                    })
-                    }    
+                        {this.state.steps.map( step => {
+                                    return(
+                                        <GameSteps 
+                                        data={step} />
+                                    )
+                            })
+                        } 
                    </Row>
                 </Col>
             </Row>
-            {/* <Row>
-                <Col>
-                    {/* <p>{this.state.game.steps[7][1]}</p> */}
-                {/* </Col>
-            </Row>
-            <Row>
-                <Col> */}
-                    {/* <p>{this.state.game.steps[7][2]}</p> */}
-                {/* </Col>
-            </Row> */} */}
         </Container>
         <Container>
              {/* //<Button onclick={(e) => this.props.push.('/')}>Back</Button> */}
