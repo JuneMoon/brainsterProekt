@@ -7,7 +7,7 @@ import React from "react";
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
 //import GameCard from "components/GameCard.jsx";
-import CardInput from "components/CardsInput.jsx";
+import Cards from "components/Cards.jsx";
 
 
 // index page sections
@@ -47,20 +47,16 @@ class Index extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <>
-      <DemoNavbar /> 
+      <DemoNavbar />
         <main ref="main">
           <Hero />
         </main>
-       <CardInput />  
-        </>  
+       <Cards history={this.props.history} />
+      </>  
     )
-  
-      
-
-      
-          
   }
 }
 
