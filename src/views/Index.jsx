@@ -44,22 +44,16 @@ class Index extends React.Component {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
-    // axios.get(`https://brainsterboxapi.herokuapp.com/games`)
-    //   .then(res => {
-    //     // const games = res.data;
-    //     this.setState({games: res.data });
-    //   })
   }
 
   render() {
     return (
       <>
-      <DemoNavbar />
+      <DemoNavbar /> 
         <main ref="main">
           <Hero />
         </main>
-      {/* <GameCard key={this.state.games.id} /> */}
-      <CardInput />  
+       <CardInput />  
         </>  
     )
   

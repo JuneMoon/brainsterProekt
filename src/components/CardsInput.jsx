@@ -2,9 +2,10 @@ import React from "react";
 import axios from "axios";
 import GameCard from "components/GameCard.jsx";
 import {
-  Row,
-  Col,
-  Card
+  Container,
+  // Row,
+  // Col,
+  // Card
 } from "reactstrap";
 //import { element } from "prop-types";
 
@@ -28,25 +29,31 @@ class CardsInput extends React.Component {
   }
 
   render() {
+      // const { games, counter, customer,  } = this.state;
       return (
-           <Row>
-             <Col sm="4">
-              <Card>
-                {this.state.games.map (games => {
+              <Container
+                style={{  
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  padding: '20px'
+                }}
+              >
+                {this.state.games.map (game => {
+                  // na sekoi 3
                   return (
-                    <GameCard 
-                    games={games}
-                    id={games.id}
-                    image={games.image}
-                    title={games.title}
-                    category={games.category}
-                    timeFrame={games.timeFrame}  
+                   
+                      <GameCard 
+                        game={game}
+                        id={game.id}
+                        image={game.image}
+                        title={game.title}
+                        category={game.category}
+                        timeFrame={game.timeFrame}  
                     />
+                      
                   )
                 })}
-              </Card>
-             </Col>
-           </Row>
+              </Container>
         )
   }
 }  

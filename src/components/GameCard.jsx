@@ -17,18 +17,16 @@ import {
 } from "reactstrap";
 
 const GameCard = (props) => {
-  
+  console.log(props.game)
   return (
-        <Col sm="4">
           <Card>
-            <CardImg src={props.image} alt="game image" />
+            {/* <CardImg src={props.image} alt="game image" /> */}
             <CardBody>
               <CardTitle>{props.title}</CardTitle>
               <CardSubtitle>Категорија: {props.category}</CardSubtitle>
               <CardText>Времетраење: {props.timeFrame}</CardText>
             </CardBody>
           </Card>
-        </Col>
         
       
   );
