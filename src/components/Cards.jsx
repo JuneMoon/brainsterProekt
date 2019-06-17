@@ -21,7 +21,6 @@ class Cards extends React.Component {
     });
   }
   render() {
-    // const { games, counter, customer,  } = this.state;
     return (
       <Container
         style={{  

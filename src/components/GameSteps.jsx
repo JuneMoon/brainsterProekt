@@ -9,13 +9,11 @@ const GameSteps = (props) => {
     return (
         <Container>
             <Row>
-                {props.steps}
+                {props.steps.step}
+                {props.steps.stepDescription}
             </Row>
         </Container>
     )
-
 }
        
-
-
 export default GameSteps;

@@ -7,14 +7,15 @@ import {
     Row,
     Col 
   } from "reactstrap";
-import { element } from "prop-types";
+
+//import { element } from "prop-types";
 
 class Cards extends React.Component {
   constructor() {
     super();
     this.state = {
       game: {},
-      steps: []
+      steps: [],
     }   
   }
   componentDidMount() {
@@ -28,15 +29,13 @@ class Cards extends React.Component {
             return o.id === id
         })
         const steps = game.steps;
-        });
+        console.log(steps);
         this.setState({game});
     });
-  }
+    }
+
   render() {
-    //const steps = this.state.game.steps;
-    console.log(this.state.game);
-    // console.log(steps);
-    console.log(this.state.steps);
+    //console.log(this.state.game);
     // console.log('rerender');
     return (
         <>
@@ -73,21 +72,19 @@ class Cards extends React.Component {
         </Container>
         <Container>
             <Row>
-                <Col>
-                   <Row>
-                        {this.state.steps.map( step => {
-                                    return(
-                                        <GameSteps 
-                                        data={step} />
-                                    )
-                            })
-                        } 
-                   </Row>
+                <Col> 
+                    {this.state.steps.map(step => {
+                            return (
+                                <GameSteps step={step} /> 
+                            )
+                    }) 
+                    }
+                    <Row>WHERE ARE MY STEPS??????</Row>
                 </Col>
             </Row>
-        </Container>
+        </Container>      
         <Container>
-             {/* //<Button onclick={(e) => this.props.push.('/')}>Back</Button> */}
+             {/* <Button onclick={(e) => this.props.push.('/')}>Back</Button> */}
         </Container>
         </>
        
