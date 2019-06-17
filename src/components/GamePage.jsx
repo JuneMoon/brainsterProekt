@@ -73,9 +73,9 @@ class Cards extends React.Component {
         <Container>
             <Row>
                 <Col> 
-                    {this.state.steps.map(step => {
+                    {this.state.steps.map( (step, stepDescription) => {
                             return (
-                                <GameSteps step={step} /> 
+                                <GameSteps step={step} stepDescription={stepDescription} /> 
                             )
                     }) 
                     }
