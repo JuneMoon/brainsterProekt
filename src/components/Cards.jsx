@@ -17,7 +17,7 @@ class Cards extends React.Component {
     axios.get('https://brainsterboxapi.herokuapp.com/games')
     .then(res => {
       const games = res.data;
-        this.setState({games});
+      this.setState({games});
     });
   }
   render() {
@@ -36,8 +36,9 @@ class Cards extends React.Component {
                   history={this.props.history} 
                   game={game}
                   id={game.id}
-                  img={game.image}
+                  img={`../assets/images/${game.id}.jpg`}
                   title={game.title}
+                  icon={game.image}
                   category={game.category}
                   timeFrame={game.timeFrame}  
               />

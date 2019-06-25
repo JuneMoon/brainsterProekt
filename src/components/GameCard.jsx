@@ -35,7 +35,7 @@ const GameCard = (props) => {
               <CardSubtitle>Категорија: {props.category}</CardSubtitle>
             </Col>
             <Col sm="4">
-              <img src={props.image} alt="game-icon" />
+              <img src={require(`${props.imagem}`)} alt="game-icon" /> 
             </Col>
            </Row>
         </Container> 
