@@ -24,7 +24,7 @@ class NavButton extends React.Component {
                 <div>
                     <Button onClick={this.closeMenu}  
                         >
-                            X
+                           Мени X
                     </Button>
                     <div>otvoreno</div>
                 </div> :

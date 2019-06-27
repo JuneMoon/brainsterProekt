@@ -36,7 +36,7 @@ class MainNavbar extends React.Component {
       <>
         <header className="header-global">
           <Navbar
-            className="navbar-main navbar-transparent navbar-light headroom"
+            className="navbar-main navbar-transparent navbar-light headroom align-items-center"
             expand="lg"
             id="navbar-main"
           >

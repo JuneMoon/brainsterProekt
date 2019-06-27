@@ -6,6 +6,7 @@ import {
   NavItem,
   NavLink,
   Nav,
+  NavbarBrand,
   Container,
   Row,
   Col,
@@ -18,120 +19,116 @@ class Footer extends React.Component {
       <>
         <footer className=" footer">
           <Container>
-            <Row className=" row-grid align-items-center mb-5">
-              <Col lg="6">
-                <h3 className=" text-primary font-weight-light mb-2">
-                  Thank you for supporting us!
-                </h3>
-                <h4 className=" mb-0 font-weight-light">
-                  Let's get in touch on any of these platforms.
-                </h4>
-              </Col>
-              <Col className=" text-lg-center btn-wrapper" lg="6">
-                <Button
-                  className=" btn-neutral btn-icon-only btn-round"
-                  color="twitter"
-                  href="https://twitter.com/creativetim"
-                  id="tooltip126536702"
-                  size="lg"
-                  target="_blank"
-                >
-                  <i className=" fa fa-twitter" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip126536702">
-                  Follow us
-                </UncontrolledTooltip>
-                <Button
-                  className=" btn-neutral btn-icon-only btn-round ml-1"
-                  color="facebook"
-                  href="https://www.facebook.com/creativetim"
-                  id="tooltip383967593"
-                  size="lg"
-                  target="_blank"
-                >
-                  <i className=" fa fa-facebook-square" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip383967593">
-                  Like us
-                </UncontrolledTooltip>
-                <Button
-                  className=" btn-neutral btn-icon-only btn-round ml-1"
-                  color="dribbble"
-                  href="https://dribbble.com/creativetim"
-                  id="tooltip568564532"
-                  size="lg"
-                  target="_blank"
-                >
-                  <i className=" fa fa-dribbble" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip568564532">
-                  Follow us
-                </UncontrolledTooltip>
-                <Button
-                  className=" btn-neutral btn-icon-only btn-round ml-1"
-                  color="github"
-                  href="https://github.com/creativetimofficial"
-                  id="tooltip626177562"
-                  size="lg"
-                  target="_blank"
-                >
-                  <i className=" fa fa-github" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip626177562">
-                  Star on Github
-                </UncontrolledTooltip>
-              </Col>
-            </Row>
+          
+              <div className="col px-0 shape-container d-flex align-items-center">
+                <Row className="align-items-center justify-content-center">
+                  <Col className="text-center" lg="10">
+                    {/* <img
+                      alt="..."
+                      className="img-fluid"
+                      src={require("assets/img/brainlogo.png")}
+                      style={{ width: "200px" }}
+                    /> */}
+                    <h3 className="h1 text-darker">
+                      FUTURE PROOF YOUR ORGANIZATION 
+                    </h3>
+                    <p className="lead text-dark">Find out how to unlock progress in your business. Understand your current state, 
+                      identify opportunity areas and prepate to take charge of your organization's future.</p>
+                    <div className="btn-wrapper mt-5">
+                      
+                      <Button
+                        className="btn-icon mb-3 mb-sm-0"
+                        color="warning"
+                        href="https://brainsterquiz.typeform.com/to/kC2I9E"
+                        size="lg"
+                        target="_blank"
+                      >
+                        <span className="btn-inner--text">
+                          Take the Assessment
+                        </span>
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            
             <hr />
-            <Row className=" align-items-center justify-content-md-between">
-              <Col md="6">
-                <div className=" copyright">
-                  © {new Date().getFullYear()}{" "}
-                  <a
-                    href="https://www.creative-tim.com?ref=adsr-footer"
+            <Row className=" justify-content-md-between">
+              <Col lg="4" >
+                <Nav className="nav-footer justify-content-start">
+                  <NavItem>
+                    <NavLink
+                      href="https://brainster.co/contact"
+                      target="_blank"
+                    >
+                      Контакт
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      href="https://www.facebook.com/pg/brainster.co/photos/"
+                      target="_blank"
+                    >
+                      Галерија
+                    </NavLink>
+                  </NavItem>
+                </Nav>  
+              </Col>
+              <Col lg="4" >
+                <div>
+                  <NavbarBrand className="justify-content-center" href="#" >
+                    <img
+                      alt="..."
+                      src={require("assets/img/brainlogo.png")}
+                    />
+                  </NavbarBrand>
+                  </div>
+              </Col>
+               <Col  lg="4">
+                <div className="justify-content-end  btn-wrapper">
+                  <Button
+                    className=" btn-neutral btn-icon-only btn-round ml-1"
+                    color="primary"
+                    href="https://www.linkedin.com/company/brainster-co"
+                    id="tooltip568564532"
+                    size="lg"
                     target="_blank"
                   >
-                    Creative Tim
-                  </a>
-                  .
-                </div>
+                    <i className="fa fa-linkedin" />
+                  </Button>
+                  <UncontrolledTooltip delay={0} target="tooltip568564532">
+                    Follow us
+                  </UncontrolledTooltip>
+                  <Button
+                    className=" btn-neutral btn-icon-only btn-round"
+                    color="twitter"
+                    href="https://twitter.com/BrainsterCo"
+                    id="tooltip126536702"
+                    size="lg"
+                    target="_blank"
+                  >
+                    <i className=" fa fa-twitter" />
+                  </Button>
+                  <UncontrolledTooltip delay={0} target="tooltip126536702">
+                    Follow us
+                  </UncontrolledTooltip>
+                  <Button
+                    className=" btn-neutral btn-icon-only btn-round ml-1"
+                    color="facebook"
+                    href="https://www.facebook.com/brainster.co"
+                    id="tooltip383967593"
+                    size="lg"
+                    target="_blank"
+                  >
+                    <i className=" fa fa-facebook-square" />
+                  </Button>
+                  <UncontrolledTooltip delay={0} target="tooltip383967593">
+                    Like us
+                  </UncontrolledTooltip>
+                </div>  
+                  
               </Col>
-              <Col md="6">
-                <Nav className=" nav-footer justify-content-end">
-                  <NavItem>
-                    <NavLink
-                      href="https://www.creative-tim.com?ref=adsr-footer"
-                      target="_blank"
-                    >
-                      Creative Tim
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://www.creative-tim.com/presentation?ref=adsr-footer"
-                      target="_blank"
-                    >
-                      About Us
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="http://blog.creative-tim.com?ref=adsr-footer"
-                      target="_blank"
-                    >
-                      Blog
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md"
-                      target="_blank"
-                    >
-                      MIT License
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-              </Col>
+            
             </Row>
           </Container>
         </footer>

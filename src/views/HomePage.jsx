@@ -5,9 +5,9 @@ import React from "react";
 // core components
 //import MainNavbar from "components/MainNavbar.jsx";
 import NavbarNav from "components/NavbarNav.jsx";
-import Footer from "components/Footer.jsx";
+//import Toolbar from "components/Toolbar.jsx";
 import Cards from "components/Cards.jsx";
-
+import Footer from "components/Footer.jsx";
 
 // index page sections
 import Hero from "./IndexSections/Hero.jsx";
@@ -33,6 +33,7 @@ class Index extends React.Component {
       <>
       {/* <MainNavbar /> */}
       <NavbarNav />
+      {/* <Toolbar /> */}
         <main ref="main">
           <Hero />
         </main>
