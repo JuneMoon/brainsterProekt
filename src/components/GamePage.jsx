@@ -51,7 +51,7 @@ class Cards extends React.Component {
                 {/* shape Hero */}
                 <section className="section section-lg section-shaped pb-250 ">
                     <div className="shape shape-default" 
-                    style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2018/02/16/10/52/beverage-3157395_1280.jpg');"}}
+                    style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2018/02/16/10/52/beverage-3157395_1280.jpg')"}}
                     >
                         
                     </div>
