@@ -27,28 +27,30 @@ class NavbarNav extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="transparent" light expand="md" className="navbar-main navbar-transparent navbar-light headroom justify-content-end">
+        <Navbar color="transparent" light expand="md" className="navbar-main navbar-transparent navbar-light headroom align-items-stretch">
           <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink> <i class="fa fa-stream fa-lg" aria-hidden="true"></i><span>Мени</span> </NavLink>
-              </NavItem>
-              <NavbarBrand className="align-items-center mr-lg-5" href="#" >
+            </Collapse>
+            {/* <NavItem>
+               <i class="fa fa-stream fa-lg" aria-hidden="true"></i><span>Мени</span> 
+              </NavItem> */}
+              <NavbarBrand className="mr-5 pr-5" href="/" >
                 <img
                   alt="..."
                   src={require("assets/img/brainlogo.png")}
                 />
               </NavbarBrand>
               
+              <Nav classname="nav justify-content-end">
               <NavItem>
-                  <Button className="btn btn-warning" href="https://www.brainster.io/business">Обуки за компании</Button>
+                  <Button className="btn btn-warning btn-md mr-1" href="https://www.brainster.io/business">Обуки за компании</Button>
               </NavItem>
               <NavItem>
-                <Button className="btn btn-darker text-warning" href="https://www.brainster.io/business">Вработи наши студенти</Button>
+                <Button className="btn btn-darker text-warning btn-md mr-1" href="https://www.brainster.io/business">Вработи наши студенти</Button>
               </NavItem>
+              
             </Nav>
-            </Collapse>
+            
         </Navbar>
       </div>
     );

@@ -7,6 +7,8 @@ import {
     Col 
   } from "reactstrap";
 
+//import "..assets/css/gamebox.css";
+
 import NavbarNav from 'components/NavbarNav';
 import Footer from 'components/Footer.jsx';
 
@@ -46,22 +48,13 @@ class Cards extends React.Component {
          <NavbarNav />
             <main ref="main">
             <div className="position-relative">
-                {/* shape Hero */}
-                <section className="section section-lg section-shaped pb-250 ">
-                    <div className="shape shape-default" 
-                    style={ backgroundImage: "url('https://cdn.pixabay.com/photo/2018/02/16/10/52/beverage-3157395_1280.jpg');"}
-                    >
-                        
+            {/* shape Hero */}
+                    <section className="section section-lg section-shaped pb-250">
+                    <div className="shape shape-style-1 shape-default">
+                    
                     </div>
-                </section>
-                <Container className="py-lg-md d-flex">
-                    <div className="col px-0">
-                    <Row>
-                        <Col lg="12">
-                            <h1>{this.state.game.title}</h1>
-                        </Col>   
-                    </Row>
-                    </div>  
+                    
+                    {/* SVG separator */}
                     <div className="separator separator-bottom separator-skew">
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -77,53 +70,75 @@ class Cards extends React.Component {
                         />
                         </svg>
                     </div>
-                    <div> 
-                    <section>
-                        <Row>
-                            <Col sm="3">
-                                <i class="fa fa-clock fa-lg" aria-hidden="true"></i><span>{this.state.game.timeFrame}</span>
-                            </Col>
-                            <Col sm="3">
-                                <i class="fa fa-users fa-lg" aria-hidden="true"></i><span>{this.state.game.groupSize}</span>
-                            </Col>
-                            <Col sm="3">
-                                <i class="fa fa-battery-half fa-lg" aria-hidden="true"></i><span>{this.state.game.level}</span>
-                            </Col>
-                            <Col sm="3">
-                                <i class="fa fa-window-restore fa-lg" aria-hidden="true"></i><span>{this.state.game.materials}</span>
-                            </Col>
-                        </Row>
                     </section>
-                    <section>
-                        <Row>
-                            <Col>
-                                <p>{this.state.game.description}</p>
-                            </Col>
-                        </Row>
-                    </section>
-                    
-                    <section>
-                        <Row>
-                            {/* <Col> 
-                                {this.state.steps.map( step => {
-                                        return (
-                                            <>
-                                                <GameSteps
-                                                {game.steps.step}
-                                                {game.steps.stepDescription}
-                                                    
-                                                />
-                                            </> 
-                                        )
-                                }) 
-                                }
-                                <Row>WHERE ARE MY STEPS??????</Row>
-                            </Col> */}
-                        </Row>
-                    </section> 
-                    </div> 
+                    {/* 1st Hero Variation */}
+                </div>
+                <Container >
+                    <Row>
+                        <Col >
+                            <h1 className="pb-4">{this.state.game.title}</h1>
+                        </Col>   
+                    </Row>
+                    <Row>
+                        <Col className="bg-transparent"> </Col>
+                    </Row>
+                    <Row>
+                        <Col className="bg-transparent"> </Col>
+                    </Row>
+                    <Row className="bg-light rounded p-2">
+                                <Col>
+                                    <i class="fa fa-clock fa-lg" aria-hidden="true"></i><span>Времетраење: <br/>{this.state.game.timeFrame}</span>
+                                </Col>
+                                <Col >
+                                    <i class="fa fa-users fa-lg" aria-hidden="true"></i><span>Број на играчи: <br/>{this.state.game.groupSize}</span>
+                                </Col>
+                                <Col >
+                                    <i class="fa fa-battery-half fa-lg" aria-hidden="true"></i><span>Тежина: <br/>{this.state.game.level}</span>
+                                </Col>
+                                <Col>
+                                    <i class="fa fa-window-restore fa-lg" aria-hidden="true"></i> <span>Материјали: <br/> {this.state.game.materials}</span>
+                                </Col>
+                    </Row>
+                    <Row>
+                        <Col className="bg-transparent"> </Col>
+                    </Row>
+                    <hr />
+                    <Row>
+                        <Col className="bg-transparent"> </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <p>{this.state.game.description}</p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="bg-transparent"> </Col>
+                    </Row>
+                    <hr />
+                    <Row>
+                        <Col className="bg-transparent"> </Col>
+                    </Row>
+                   
+                
+                    <Row>
+                        <Col> 
+                            {/* {this.state.steps.map( step => {
+                                    return (
+                                        <>
+                                            <GameSteps
+                                            {game.steps.step}
+                                            {game.steps.stepDescription}
+                                                
+                                            />
+                                        </> 
+                                    )
+                            }) 
+                            } */}
+                            <Row>WHERE ARE MY STEPS??????</Row>
+                        </Col> 
+                    </Row>
                 </Container>
-            </div>
+            
             </main>
 
             <Footer />
