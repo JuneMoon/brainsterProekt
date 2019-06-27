@@ -493,7 +493,8 @@ pre {
 
 .row {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
   margin-right: -15px;
   margin-left: -15px; }
 
@@ -3072,7 +3073,7 @@ input[type="button"].btn-block {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   padding: 1rem 1rem; }
   .navbar > .container,
@@ -3095,7 +3096,7 @@ input[type="button"].btn-block {
 
 .navbar-nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
@@ -9492,6 +9493,10 @@ textarea[resize="horizontal"] {
 .navbar-nav .nav-item .media:not(:last-child) {
   margin-bottom: 1.5rem; }
 
+.nav-item {
+  list-style: none;
+}
+
 @media (min-width: 992px) {
   .navbar-nav .nav-item {
     margin-right: .5rem; }
@@ -10038,7 +10043,7 @@ textarea[resize="horizontal"] {
     .section-shaped .shape-skew span {
       transform: skew(4deg); }
   .section-shaped .shape-primary {
-    background-image: url("https://cdn.pixabay.com/photo/2018/02/16/10/52/beverage-3157395_1280.jpg"); }
+    background-image: url("https://pixabay.com/get/55e1d044495ba914f6d1867dda6d49214b6ac3e45657704f732a7ed196/beverage-3157395_1920.jpg"); }
     /* .section-shaped .shape-primary :nth-child(1) {
       background: #53f; }
     .section-shaped .shape-primary :nth-child(2) {
@@ -10050,7 +10055,7 @@ textarea[resize="horizontal"] {
     .section-shaped .shape-primary :nth-child(5) {
       background: #1fa2ff; } */
   .section-shaped .shape-default {
-    background-image: url("https://cdn.pixabay.com/photo/2018/02/16/10/52/beverage-3157395_1280.jpg"); }
+    background-image: url("https://pixabay.com/get/55e1d044495ba914f6d1867dda6d49214b6ac3e45657704f732a7ed196/beverage-3157395_1920.jpg"); }
     /* .section-shaped .shape-default :nth-child(1) {
       background: #7795f8; }
     .section-shaped .shape-default :nth-child(2) {
@@ -10156,9 +10161,9 @@ textarea[resize="horizontal"] {
     .section-shaped .shape-style-1 span {
       height: 90px; } }
   .section-shaped .shape-style-1.shape-primary {
-    background-image: url("https://cdn.pixabay.com/photo/2018/02/16/10/52/beverage-3157395_1280.jpg"); }
+    background-image: url("https://images.pexels.com/photos/1498964/pexels-photo-1498964.jpeg"); }
   .section-shaped .shape-style-1.shape-default {
-    background-image: url("https://cdn.pixabay.com/photo/2018/02/16/10/52/beverage-3157395_1280.jpg"); }
+    background-image: url("https://images.pexels.com/photos/1498964/pexels-photo-1498964.jpeg"); }
   .section-shaped .shape-style-1.shape-light {
     background: linear-gradient(150deg, shapes-light-color("step-1-gradient-bg") 15%, shapes-light-color("step-2-gradient-bg") 70%, shapes-light-color("step-3-gradient-bg") 94%); }
   .section-shaped .shape-style-1.shape-dark {

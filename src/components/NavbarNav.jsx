@@ -27,14 +27,14 @@ class NavbarNav extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="transparent" light expand="md" className="navbar-main navbar-transparent navbar-light headroom justify-content-end">
+        <Navbar color="transparent" light expand="md" className="navbar-main navbar-transparent navbar-light d-flex justify-content-around headroom ">
           <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className="navbar navbar-expand-lg ml-auto " >
               <NavItem>
                 <NavLink> <i class="fa fa-stream fa-lg" aria-hidden="true"></i><span>Мени</span> </NavLink>
               </NavItem>
-              <NavbarBrand className="align-items-center mr-lg-5" href="#" >
+              <NavbarBrand className=" mr-lg-5" href="#" >
                 <img
                   alt="..."
                   src={require("assets/img/brainlogo.png")}

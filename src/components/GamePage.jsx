@@ -24,6 +24,9 @@ class Cards extends React.Component {
     }   
   }
   componentDidMount() {
+    document.documentElement.scrollTop = 0;
+    document.scrollingElement.scrollTop = 0;
+    this.refs.main.scrollTop = 0;
     axios.get('https://brainsterboxapi.herokuapp.com/games')
     .then(res => {
         const pathname = this.props.location.pathname;
@@ -38,6 +41,8 @@ class Cards extends React.Component {
         this.setState({game});
     });
     }
+    
+        
 
   render() {
     //console.log(this.state.game);
@@ -49,11 +54,17 @@ class Cards extends React.Component {
             <main ref="main">
             <div className="position-relative">
                 {/* shape Hero */}
-                <section className="section section-lg section-shaped pb-250 ">
-                    <div className="shape shape-default" 
-                    style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2018/02/16/10/52/beverage-3157395_1280.jpg')"}}
+                <section className="section section-xl section-shaped pb-250 ">
+                    <div className="shape shape-default pb-350" 
+                    style={{ backgroundImage: "url('https://images.pexels.com/photos/1498964/pexels-photo-1498964.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260%202520w')"}}
                     >
-                        
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                     
                     {/* SVG separator */}
@@ -89,13 +100,13 @@ class Cards extends React.Component {
                     </Row>
                     <Row className="bg-light rounded p-2">
                                 <Col>
-                                    <i class="fa fa-clock fa-lg" aria-hidden="true"></i><span>Времетраење: <br/>{this.state.game.timeFrame}</span>
+                                    <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> <span>Времетраење: <br/>{this.state.game.timeFrame}</span>
                                 </Col>
                                 <Col >
-                                    <i class="fa fa-users fa-lg" aria-hidden="true"></i><span>Број на играчи: <br/>{this.state.game.groupSize}</span>
+                                    <i class="fa fa-users fa-lg" aria-hidden="true"></i> <span>Број на играчи: <br/>{this.state.game.groupSize}</span>
                                 </Col>
                                 <Col >
-                                    <i class="fa fa-battery-half fa-lg" aria-hidden="true"></i><span>Тежина: <br/>{this.state.game.level}</span>
+                                    <i class="fa fa-battery-half fa-lg" aria-hidden="true"></i> <span>Тежина: <br/>{this.state.game.level}</span>
                                 </Col>
                                 <Col>
                                     <i class="fa fa-window-restore fa-lg" aria-hidden="true"></i> <span>Материјали: <br/> {this.state.game.materials}</span>
