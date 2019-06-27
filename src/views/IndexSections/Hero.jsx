@@ -26,7 +26,18 @@ class Hero extends React.Component {
             <Container className="shape-container d-flex align-items-center py-lg">
               <div className="col px-0">
                 <Row className="align-items-center justify-content-center">
-                  <Col className="text-center" lg="6">
+                  <Col className="text-center" lg="10">
+                  <h6 className="h6 text-white">
+                      Изработено од студенти на академијата за програмирање на <span className="text-warning" href="https://www.brainster.io/">Brainster</span> 
+                    </h6>
+                  </Col>
+                </Row>
+              </div>
+            </Container>
+            <Container className="shape-container d-flex align-items-center py-lg">
+              <div className="col px-0">
+                <Row className="align-items-center justify-content-center">
+                  <Col className="text-center" lg="10">
                     {/* <img
                       alt="..."
                       className="img-fluid"
@@ -39,43 +50,18 @@ class Hero extends React.Component {
                     <p className="lead text-white">Find out how to unlock progress in your business. Understand your current state, 
                       identify opportunity areas and prepate to take charge of your organization's future.</p>
                     <div className="btn-wrapper mt-5">
-                      <Button
-                        className="btn-white btn-icon mb-3 mb-sm-0"
-                        color="default"
-                        href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
-                        size="lg"
-                      >
-                        <span className="btn-inner--icon mr-1">
-                          <i className="ni ni-cloud-download-95" />
-                        </span>
-                        <span className="btn-inner--text">Download React</span>
-                      </Button>{" "}
+                      
                       <Button
                         className="btn-icon mb-3 mb-sm-0"
-                        color="github"
-                        href="https://github.com/creativetimofficial/argon-design-system-react"
+                        color="warning"
+                        href="https://brainsterquiz.typeform.com/to/kC2I9E"
                         size="lg"
                         target="_blank"
                       >
-                        <span className="btn-inner--icon mr-1">
-                          <i className="fa fa-github" />
-                        </span>
                         <span className="btn-inner--text">
-                          <span className="text-warning mr-1">Star us</span>
-                          on Github
+                          Take the Assessment
                         </span>
                       </Button>
-                    </div>
-                    <div className="mt-5">
-                      <small className="text-white font-weight-bold mb-0 mr-2">
-                        *proudly coded by
-                      </small>
-                      <img
-                        alt="..."
-                        className="ml-1"
-                        style={{ height: "28px" }}
-                        src={require("assets/img/brand/creativetim-white-slim.png")}
-                      />
                     </div>
                   </Col>
                 </Row>

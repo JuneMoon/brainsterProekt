@@ -18,8 +18,8 @@ import {
 } from "reactstrap";
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
-import SimpleFooter from "components/Footers/SimpleFooter.jsx";
+import MainNavbar from "components/MainNavbar.jsx";
+import Footer from "components/Footer.jsx";
 
 class Login extends React.Component {
   componentDidMount() {
@@ -30,7 +30,7 @@ class Login extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
+        <MainNavbar />
         <main ref="main">
           <section className="section section-shaped section-lg">
             <div className="shape shape-style-1 bg-gradient-default">
@@ -59,10 +59,10 @@ class Login extends React.Component {
                           onClick={e => e.preventDefault()}
                         >
                           <span className="btn-inner--icon mr-1">
-                            <img
+                            {/* <img
                               alt="..."
                               src={require("assets/img/icons/common/github.svg")}
-                            />
+                            /> */}
                           </span>
                           <span className="btn-inner--text">Github</span>
                         </Button>
@@ -73,10 +73,10 @@ class Login extends React.Component {
                           onClick={e => e.preventDefault()}
                         >
                           <span className="btn-inner--icon mr-1">
-                            <img
+                            {/* <img
                               alt="..."
                               src={require("assets/img/icons/common/google.svg")}
-                            />
+                            /> */}
                           </span>
                           <span className="btn-inner--text">Google</span>
                         </Button>
@@ -161,7 +161,7 @@ class Login extends React.Component {
             </Container>
           </section>
         </main>
-        <SimpleFooter />
+        <Footer />
       </>
     );
   }

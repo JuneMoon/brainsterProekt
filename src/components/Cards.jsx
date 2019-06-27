@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import GameCard from "components/GameCard.jsx";
-import { Container } from "reactstrap";
+import {  Container,  Row, Col, Card, CardColumns  } from "reactstrap";
 //import { element } from "prop-types";
 
 class Cards extends React.Component {
@@ -22,30 +22,40 @@ class Cards extends React.Component {
   }
   render() {
     return (
-      <Container
-        style={{  
-          display: 'flex',
-          flexWrap: 'wrap',
-          padding: '20px'
-        }}
-      >
-        {
-          this.state.games.map (game => {
-            return (
-                <GameCard 
-                  history={this.props.history} 
-                  game={game}
-                  id={game.id}
-                  img={`../assets/images/${game.id}.jpg`}
-                  title={game.title}
-                  icon={game.image}
-                  category={game.category}
-                  timeFrame={game.timeFrame}  
-              />
-            )
-          })
-        }
+      <Container className="fliud">
+          <Row >
+            <Col lg="12">
+              <CardColumns>
+              
+                {
+                  this.state.games.map (game => {
+                    return (
+                      <Card className="card bg-light card-lift--hover shadow border-0  justify-content-left">
+                        
+                        <GameCard 
+                          history={this.props.history} 
+                          game={game}
+                          id={game.id}
+                          image={game.image}
+                          
+                          // {`require(assets/images/${game.id}.jpg)`}
+                          title={game.title}
+                          
+                          category={game.category}
+                          timeFrame={game.timeFrame}  
+                      />  
+                      </Card>
+                    )
+                  })
+                }
+               </CardColumns>
+            </Col>
+          </Row>
       </Container>
+       
+          
+        
+      
     );
   }
 }  

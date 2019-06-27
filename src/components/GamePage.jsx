@@ -1,12 +1,12 @@
 import React from "react";
 import axios from "axios";
-import NavButton from './NavButton';
-import GameSteps from './GameSteps';
+//import GameSteps from './GameSteps';
 import {
     Container,
     Row,
     Col 
   } from "reactstrap";
+//import GameSteps from "./GameSteps";
 
 //import { element } from "prop-types";
 
@@ -39,7 +39,7 @@ class Cards extends React.Component {
     // console.log('rerender');
     return (
         <>
-        <NavButton />
+       
         <Container>
             <Row>
                 <Col>
@@ -72,15 +72,21 @@ class Cards extends React.Component {
         </Container>
         <Container>
             <Row>
-                <Col> 
-                    {this.state.steps.map( (step, stepDescription) => {
+                {/* <Col> 
+                    {this.state.steps.map( step => {
                             return (
-                                <GameSteps step={step} stepDescription={stepDescription} /> 
+                                <>
+                                    <GameSteps
+                                       {game.steps.step}
+                                       {game.steps.stepDescription}
+                                        
+                                    />
+                                </> 
                             )
                     }) 
                     }
                     <Row>WHERE ARE MY STEPS??????</Row>
-                </Col>
+                </Col> */}
             </Row>
         </Container>      
         <Container>

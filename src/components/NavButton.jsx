@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "reactstrap";
 
 class NavButton extends React.Component {
   constructor() {
@@ -21,17 +22,17 @@ class NavButton extends React.Component {
             {
                 this.state.open ?
                 <div>
-                    <button onClick={this.closeMenu}  
+                    <Button onClick={this.closeMenu}  
                         >
                             X
-                    </button>
+                    </Button>
                     <div>otvoreno</div>
                 </div> :
-                <button
+                <Button
                     onClick={this.openMenu}
                 >
                     Click Me
-                </button>
+                </Button>
             }
         </div>
     );
