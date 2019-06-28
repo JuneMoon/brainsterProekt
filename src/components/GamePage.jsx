@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
-import NavButton from './NavButton';
+import DemoNavbar from 'components/Navbars/DemoNavbar';
+// import NavButton from './NavButton';
 import GameSteps from './GameSteps';
 import {
     Container,
@@ -39,7 +40,8 @@ class Cards extends React.Component {
     // console.log('rerender');
     return (
         <>
-        <NavButton />
+        {/* <NavButton /> */}
+        <DemoNavbar />
         <Container>
             <Row>
                 <Col>
