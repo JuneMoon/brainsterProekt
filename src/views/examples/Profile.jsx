@@ -4,7 +4,7 @@ import React from "react";
 import { Button, Card, Container, Row, Col } from "reactstrap";
 
 // core components
-import MainNavbar from "components/MainNavbar.jsx";
+import DemoNavbar from "components/DemoNavbar.jsx";
 import Footer from "components/Footer.jsx";
 
 class Profile extends React.Component {
@@ -16,7 +16,7 @@ class Profile extends React.Component {
   render() {
     return (
       <>
-        <MainNavbar />
+        <DemoNavbar />
         <main className="profile-page" ref="main">
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background */}

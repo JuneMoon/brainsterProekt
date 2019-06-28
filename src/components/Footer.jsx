@@ -76,7 +76,7 @@ class Footer extends React.Component {
               </Col>
               <Col lg="4" >
                 <div>
-                  <NavbarBrand className="justify-content-center" href="#" >
+                  <NavbarBrand className="justify-content-center" href="/" >
                     <img
                       alt="..."
                       src={require("assets/img/brainlogo.png")}

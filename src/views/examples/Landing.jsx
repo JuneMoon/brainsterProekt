@@ -20,7 +20,7 @@ import {
 } from "reactstrap";
 
 // core components
-import MainNavbar from "components/MainNavbar.jsx";
+import DemoNavbar from "components/DemoNavbar.jsx";
 //import GameCard from "components/GameCard.jsx";
 
 // index page sections
@@ -36,7 +36,7 @@ class Landing extends React.Component {
   render() {
     return (
       <>
-        <MainNavbar />
+        <DemoNavbar />
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}

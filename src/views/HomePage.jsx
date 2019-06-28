@@ -3,9 +3,7 @@ import React from "react";
 
 
 // core components
-//import MainNavbar from "components/MainNavbar.jsx";
-//import NavbarNav from "components/NavbarNav.jsx";
-//import Toolbar from "components/Toolbar.jsx";
+
 import Cards from "components/Cards.jsx";
 import Footer from "components/Footer.jsx";
 
@@ -33,13 +31,13 @@ class Index extends React.Component {
     return (
       <>
       <DemoNavbar />
-      {/* <MainNavbar /> */}
-      {/* <NavbarNav /> */}
-      {/* <Toolbar /> */}
+     
         <main ref="main">
           <Hero />
         </main>
+
        <Cards history={this.props.history} />
+
       <Footer />
       </>  
     )

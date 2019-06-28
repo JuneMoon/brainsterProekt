@@ -34,7 +34,7 @@ class NavbarNav extends React.Component {
               <NavItem>
                 <NavLink> <i class="fa fa-stream fa-lg" aria-hidden="true"></i><span>Мени</span> </NavLink>
               </NavItem>
-              <NavbarBrand className=" mr-lg-5" href="#" >
+              <NavbarBrand className=" mr-lg-5" href="/" >
                 <img
                   alt="..."
                   src={require("assets/img/brainlogo.png")}
@@ -42,10 +42,10 @@ class NavbarNav extends React.Component {
               </NavbarBrand>
               
               <NavItem>
-                  <Button className="btn btn-warning" href="https://www.brainster.io/business">Обуки за компании</Button>
+                  <Button className="btn btn-warning" href="https://www.brainster.io/business" target="_blank">Обуки за компании</Button>
               </NavItem>
               <NavItem>
-                <Button className="btn btn-darker text-warning" href="https://www.brainster.io/business">Вработи наши студенти</Button>
+                <Button className="btn btn-darker text-warning" href="https://www.brainster.io/business"target="_blank">Вработи наши студенти</Button>
               </NavItem>
             </Nav>
             </Collapse>

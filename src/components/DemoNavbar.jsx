@@ -52,7 +52,7 @@ class DemoNavbar extends React.Component {
                     </NavItem>
                   {/* </Col>  
                   <Col lg={{ size: '2', offset: 1 }}> */}
-                  <NavbarBrand className="nav align-items-right mr-lg-5" href="#" >
+                  <NavbarBrand className="nav align-items-right mr-lg-5" href="/" >
                       <img
                         alt="..."
                         src={require("assets/img/brainlogo.png")}
@@ -218,10 +218,10 @@ class DemoNavbar extends React.Component {
                       {/* <Col lg={{ size: 'auto', offset: 2 }}> */}
                         {/* <div className="nav align-items-right"> */}
                           <NavItem >
-                            <Button className="btn btn-warning" href="https://www.brainster.io/business">Обуки за компании</Button>
-                          </NavItem>
+                            <Button className="btn btn-warning" href="https://www.brainster.io/business" target="_blank" >Обуки за компании</Button>
+                          </NavItem> 
                           <NavItem >
-                            <Button className="btn btn-darker text-warning" href="https://www.brainster.io/business">Вработи наши студенти</Button>
+                            <Button className="btn btn-darker text-warning" href="https://www.brainster.io/business" target="_blank" >Вработи наши студенти</Button>
                           </NavItem>
                         {/* </div> */}
                       {/* </Col> */}

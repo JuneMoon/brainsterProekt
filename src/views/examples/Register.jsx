@@ -18,7 +18,7 @@ import {
 } from "reactstrap";
 
 // core components
-import MainNavbar from "components/MainNavbar.jsx";
+import DemoNavbar from "components/DemoNavbar.jsx";
 import Footer from "components/Footer.jsx";
 
 class Register extends React.Component {
@@ -30,7 +30,7 @@ class Register extends React.Component {
   render() {
     return (
       <>
-        <MainNavbar />
+        <DemoNavbar />
         <main ref="main">
           <section className="section section-shaped section-lg">
             <div className="shape shape-style-1 bg-gradient-default">
